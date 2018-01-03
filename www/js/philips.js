@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", function() {
     navigator.splashscreen.hide();
     //(Un)comment the following line to turn on/off SAML login.
-    // registerSaml(); // CC 12.21.2017
+    registerSaml(); // CC 12.21.2017
     overrideConnectionError();
 
     // waitForDojoConfig(function(){
