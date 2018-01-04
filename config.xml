@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.philips.ht.myphilipsnews.tarun" version="1.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.philips.ht.myphilipsnews.tst" version="1.0">
 
-	<name>Tarun - My Philips news</name>
+	<name>Test - My Philips news</name>
 
 	<description>My Philips news - Global Communications App</description>
 
@@ -102,6 +102,9 @@
 	
 	<plugin name="cordova-build-architecture" spec="https://github.com/MBuchalik/cordova-build-architecture.git#v1.0.1" source="git" />
 
+	<!-- Using this to clear cache/cookies on logout -->
+	<plugin name="cordova-remove-cookies" spec="https://github.com/bez4pieci/Phonegap-Cookies-Plugin.git" source="git" />
+
 	<!-- Crosswalk -->
 	<!-- <plugin name="cordova-plugin-crosswalk-webview" source="npm" spec="2.3.0" />  -->
 	<!-- This plugin should be removed if the project does not use Crosswalk -->
@@ -122,9 +125,9 @@
 	<plugin name="cordova-music-controls-plugin" spec="https://github.com/homerours/cordova-music-controls-plugin" source="git" />
 	<plugin name="cordova-plugin-remotecommand" source="npm" version="1.0.0" />
 	<plugin name="cordova-plugin-nowplaying" source="npm" version="1.0.2" />
+    
     <!-- ADOBE MOBILE SERVICES -->
     <plugin name="adobe-mobile-services" source="npm"/>
-
 
 	<platform name="ios">
 		<icon src="res/ios/icon-app-76x76@2x.png" platform="ios" width="152" height="152"/>
@@ -154,6 +157,7 @@
 	<platform name="android">
 		<splash src="splash.png"/>
 		<!-- Icon definitions - for more details: http://developer.android.com/guide/topics/resources/providing-resources.html -->
+
 		<icon src="res/android/mipmap-xhdpi/ic_launcher.png" platform="android" qualifier="xhdpi"/>
 		<icon src="res/android/mipmap-hdpi/ic_launcher.png" platform="android" qualifier="hdpi"/>
 		<icon src="res/android/mipmap-mdpi/ic_launcher.png" platform="android" qualifier="mdpi"/>
