@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", function() {
     navigator.splashscreen.hide();
-    //(Un)comment the following line to turn on/off SAML login.
-    // registerSaml();
+	//(Un)comment the following line to turn on/off SAML login.
+    registerSaml();
     overrideConnectionError();
 
     // waitForDojoConfig(function(){
@@ -23,14 +23,14 @@ document.addEventListener("deviceready", function() {
 /*
  * This method overrides the default sync behavior so that file that are already on the filesystem are synced automatically
  */
-function overrideOfflineSync() {
+function overrideOfflineSync(){
     var _downloadFileFn = window.dojoConfig.data.offlineBackend.downloadFileFn;
     var downloadDir;
     window.dojoConfig.data.offlineBackend.getStorageDirFn(
         function(dir) {
             downloadDir = dir.nativeURL;
         },
-        function(err) {
+        function(err){
 
         }
     )
@@ -38,10 +38,10 @@ function overrideOfflineSync() {
 
         var target = downloadDir + "files/" + dst;
 
-        window.resolveLocalFileSystemURL(target, function() {
+        window.resolveLocalFileSystemURL(target, function(){
             console.log("skippping: " + target);
             callback();
-        }, function() {
+        }, function(){
             console.log("downloading: " + target);
             return _downloadFileFn(src, dst, callback, error);
         });
@@ -68,7 +68,7 @@ function registerSaml() {
         //debugger;
         var cb = function(event) {
             if (event.url.indexOf(mx.remoteUrl) == 0 && event.url.indexOf("SSO") == -1) {
-                //if (urlMatch.test(event.url)) {
+            //if (urlMatch.test(event.url)) {
                 console.log("User redirected to app")
                 //make sure this is only called once
                 samlWindow.removeEventListener("loadstop", cb);
