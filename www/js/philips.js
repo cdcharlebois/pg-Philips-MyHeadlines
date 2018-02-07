@@ -3,6 +3,9 @@ document.addEventListener("deviceready", function() {
 	//(Un)comment the following line to turn on/off SAML login.
     registerSaml();
     overrideConnectionError();
+    waitForDojoConfig(function(){
+	    window.dojoConfig.server.timeout = 30000;
+    });
 
     // waitForDojoConfig(function(){
     //     overrideOfflineSync();
